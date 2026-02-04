@@ -31,13 +31,27 @@ function PokemonCard({ url }) {
     return () => console.log("Error accured while fetching pokemon data");
   }, []);
 
+  function displayTypes() {
+    return pokemonData?.types.map((type) => (
+      <>
+        <li key={type.type.name}>{type.type.name}</li>
+      </>
+    ));
+  }
+
   console.log(pokemonData);
 
   if (loading) return <p>Loading...</p>;
 
   if (error) return <p>Error accured: {error}</p>;
 
-  return <h1>{pokemonData.name}</h1>;
+  return (
+    <div className="pokemon-container">
+      <img src={pokemonData?.sprites.front_default} alt="" />
+      <h1>{pokemonData.name}</h1>
+      <ul>{displayTypes()}</ul>
+    </div>
+  );
 }
 
 export default PokemonCard;
