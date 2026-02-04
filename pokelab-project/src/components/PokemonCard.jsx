@@ -46,10 +46,14 @@ function PokemonCard({ url }) {
   if (error) return <p>Error accured: {error}</p>;
 
   return (
-    <div className="pokemon-container">
-      <img src={pokemonData?.sprites.front_default} alt="" />
-      <h1>{pokemonData.name}</h1>
-      <ul>{displayTypes()}</ul>
+    <div className="pokemon-card-container">
+      <img
+        src={pokemonData?.sprites.front_default}
+        alt={pokemonData.name}
+        className="pokemon-card-img"
+      />
+      <h1 className="pokemon-card-name">{pokemonData.name}</h1>
+      <ul className="pokemon-card-types">{displayTypes()}</ul>
     </div>
   );
 }
