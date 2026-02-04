@@ -15,8 +15,6 @@ function PokemonCard({ url }) {
 
         const data = await response.json();
 
-        console.log(data);
-
         setPokemonData(data);
       } catch (err) {
         setError(err.message);
@@ -33,13 +31,9 @@ function PokemonCard({ url }) {
 
   function displayTypes() {
     return pokemonData?.types.map((type) => (
-      <>
-        <li key={type.type.name}>{type.type.name}</li>
-      </>
+      <li key={type.type.name}>{type.type.name}</li>
     ));
   }
-
-  console.log(pokemonData);
 
   if (loading) return <p>Loading...</p>;
 
