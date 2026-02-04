@@ -4,10 +4,12 @@ import Home from "./Home";
 import PokemonList from "./pages/PokemonList";
 import Pokemon from "./pages/Pokemon";
 import NotFound from "./NotFound";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
+      <NavBar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
