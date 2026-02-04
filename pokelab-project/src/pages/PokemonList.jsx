@@ -1,19 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { PokemonContext } from "../context/PokemonContext";
 import { Link } from "react-router-dom";
 import PokemonCard from "../components/PokemonCard";
 
 function PokemonList() {
-  const { fetchPokemonList, loading, error, pokemonList } =
+  const { fetchPokemonList, loading, error, pokemonList, offset } =
     useContext(PokemonContext);
 
   useEffect(() => {
-    fetchPokemonList(20, 0);
+    fetchPokemonList();
 
     return () => console.log("Stopped fetching pokemon list");
-  }, []);
-
-  console.log(pokemonList);
+  }, [offset]);
 
   if (loading) return <p>Loading...</p>;
 
