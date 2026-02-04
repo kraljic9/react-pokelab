@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { PokemonContext } from "../context/PokemonContext";
 import { Link } from "react-router-dom";
+import PokemonCard from "../components/PokemonCard";
 
 function PokemonList() {
   const { fetchPokemonList, loading, error, pokemonList } =
@@ -25,7 +26,9 @@ function PokemonList() {
       <div className="pokemon-grid">
         {pokemonList.map((pokemon) => (
           <li key={pokemon.name}>
-            <Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
+            <Link to={`/pokemon/${pokemon.name}`}>
+              <PokemonCard url={pokemon.url} />
+            </Link>
           </li>
         ))}
       </div>
