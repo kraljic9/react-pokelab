@@ -5,12 +5,18 @@ function PokemonContextProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [pokemonList, setPokemonList] = useState(null);
+  const [limit, setLimit] = useState(20);
+  const [offset, setOffset] = useState(0);
 
-  async function fetchPokemonList(limit, offset) {
+  console.log(offset);
+
+  async function fetchPokemonList() {
     try {
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`,
       );
+
+      console.log(response);
 
       if (!response.ok)
         throw new Error("Error accured while fetching pokemon list");
@@ -47,7 +53,15 @@ function PokemonContextProvider({ children }) {
 
   return (
     <PokemonContext.Provider
-      value={{ loading, error, fetchPokemon, fetchPokemonList, pokemonList }}
+      value={{
+        loading,
+        error,
+        fetchPokemon,
+        fetchPokemonList,
+        pokemonList,
+        offset,
+        setOffset,
+      }}
     >
       {children}
     </PokemonContext.Provider>
