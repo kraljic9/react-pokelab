@@ -7,6 +7,7 @@ function PokemonContextProvider({ children }) {
   const [pokemonList, setPokemonList] = useState(null);
   const [limit, setLimit] = useState(20);
   const [offset, setOffset] = useState(0);
+  const [currentPokemon, setCurrentPokemon] = useState(null);
 
   console.log(offset);
 
@@ -42,7 +43,7 @@ function PokemonContextProvider({ children }) {
 
       const data = await response.json();
 
-      return data;
+      setCurrentPokemon(data);
     } catch (err) {
       setError(err.message);
       setLoading(false);
@@ -61,6 +62,7 @@ function PokemonContextProvider({ children }) {
         pokemonList,
         offset,
         setOffset,
+        currentPokemon,
       }}
     >
       {children}
