@@ -62,3 +62,15 @@ body {
   background-color: black;
   cursor: pointer;
 }
+
+/* Pokemon grid */
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Pokemon card */
