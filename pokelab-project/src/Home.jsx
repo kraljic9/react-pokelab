@@ -9,10 +9,20 @@ function Home() {
     <>
       <PokemonList />
 
-      <button onClick={() => setOffset((prev) => prev - 20)}>
-        Previous Page
-      </button>
-      <button onClick={() => setOffset((prev) => prev + 20)}>Next Page</button>
+      <div className="button-container">
+        <button
+          onClick={() => setOffset((prev) => prev - 20)}
+          className="switch-page-btn"
+        >
+          Previous Page
+        </button>
+        <button
+          onClick={() => setOffset((prev) => prev + 20)}
+          className="switch-page-btn"
+        >
+          Next Page
+        </button>
+      </div>
     </>
   );
 }
