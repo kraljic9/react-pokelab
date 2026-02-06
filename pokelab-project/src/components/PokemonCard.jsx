@@ -46,8 +46,10 @@ function PokemonCard({ url }) {
         alt={pokemonData.name}
         className="pokemon-card-img"
       />
-      <h1 className="pokemon-card-name">{pokemonData.name}</h1>
-      <ul className="pokemon-card-types">{displayTypes()}</ul>
+      <div className="pokemon-card-text-wrapper">
+        <h1 className="pokemon-card-name">{pokemonData.name}</h1>
+        <ul className="pokemon-card-types">{displayTypes()}</ul>
+      </div>
     </div>
   );
 }
