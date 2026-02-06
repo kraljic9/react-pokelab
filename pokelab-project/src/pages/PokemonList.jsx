@@ -21,8 +21,8 @@ function PokemonList() {
     <>
       <div className="pokemon-grid">
         {pokemonList.map((pokemon) => (
-          <li key={pokemon.name}>
-            <Link to={`/pokemon/${pokemon.name}`}>
+          <li key={pokemon.name} className="pokemon-card-link">
+            <Link to={`/pokemon/${pokemon.name}`} className="link-wrapper">
               <PokemonCard url={pokemon.url} />
             </Link>
           </li>
