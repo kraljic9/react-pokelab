@@ -19,8 +19,6 @@ function PokemonList() {
 
   return (
     <>
-      <h1>Pokemon list</h1>
-
       <div className="pokemon-grid">
         {pokemonList.map((pokemon) => (
           <li key={pokemon.name}>
