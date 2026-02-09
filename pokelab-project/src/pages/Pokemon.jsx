@@ -39,21 +39,31 @@ function Pokemon() {
   if (!currentPokemon) return null;
 
   return (
-    <>
-      <img src={`${currentPokemon?.sprites.front_default}`} alt="" />
-      <h1>{currentPokemon?.name}</h1>
+    <div className="current-pokemon-container">
+      <img
+        src={`${currentPokemon?.sprites.front_default}`}
+        alt=""
+        className="current-pokemon-img"
+      />
+      <h1 className="current-pokemon-name">{currentPokemon?.name}</h1>
 
-      <p>Height: {currentPokemon.height / 10}m</p>
-      <p>Weight: {currentPokemon.weight / 10}kg</p>
-      <p>Base XP: {currentPokemon.base_experience}xp</p>
+      <h3 className="current-pokemon-info">Info</h3>
+      <p className="current-pokemon-txt">
+        Height: {currentPokemon.height / 10}m
+      </p>
+      <p className="current-pokemon-txt">
+        Weight: {currentPokemon.weight / 10}kg
+      </p>
+      <p className="current-pokemon-txt">
+        Base XP: {currentPokemon.base_experience}xp
+      </p>
 
-      <p>Type</p>
+      <h3 className="current-pokemon-type-title">Type</h3>
+      <ul className="current-pokemon-types">{fetchTypes()}</ul>
 
-      <ul>{fetchTypes()}</ul>
-
-      <p>Stats</p>
-      <ul>{fetchStats()}</ul>
-    </>
+      <h3 className="current-pokemon-stats-title">Stats</h3>
+      <ul className="current-pokemon-stats">{fetchStats()}</ul>
+    </div>
   );
 }
 
