@@ -40,29 +40,39 @@ function Pokemon() {
 
   return (
     <div className="current-pokemon-container">
+      <div className="current-pokemon-box">
+        <img
+          src={`${currentPokemon?.sprites.front_default}`}
+          alt=""
+          className="current-pokemon-img"
+        />
+        <h1 className="current-pokemon-name">{currentPokemon?.name}</h1>
+      </div>
+
+      <div className="pokemon-info-boxes">
+        <h3 className="current-pokemon-info">Info</h3>
+        <p className="current-pokemon-txt">
+          Height: {currentPokemon.height / 10}m
+        </p>
+        <p className="current-pokemon-txt">
+          Weight: {currentPokemon.weight / 10}kg
+        </p>
+        <p className="current-pokemon-txt">
+          Base XP: {currentPokemon.base_experience}xp
+        </p>
+
+        <h3 className="current-pokemon-type-title">Type</h3>
+        <ul className="current-pokemon-types">{fetchTypes()}</ul>
+
+        <h3 className="current-pokemon-stats-title">Stats</h3>
+        <ul className="current-pokemon-stats">{fetchStats()}</ul>
+      </div>
+
       <img
         src={`${currentPokemon?.sprites.front_default}`}
         alt=""
-        className="current-pokemon-img"
+        className="current-pokemon-big-img"
       />
-      <h1 className="current-pokemon-name">{currentPokemon?.name}</h1>
-
-      <h3 className="current-pokemon-info">Info</h3>
-      <p className="current-pokemon-txt">
-        Height: {currentPokemon.height / 10}m
-      </p>
-      <p className="current-pokemon-txt">
-        Weight: {currentPokemon.weight / 10}kg
-      </p>
-      <p className="current-pokemon-txt">
-        Base XP: {currentPokemon.base_experience}xp
-      </p>
-
-      <h3 className="current-pokemon-type-title">Type</h3>
-      <ul className="current-pokemon-types">{fetchTypes()}</ul>
-
-      <h3 className="current-pokemon-stats-title">Stats</h3>
-      <ul className="current-pokemon-stats">{fetchStats()}</ul>
     </div>
   );
 }
