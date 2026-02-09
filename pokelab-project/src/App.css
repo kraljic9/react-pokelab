@@ -7,6 +7,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
+  background-color: #f9fbff;
+  border: 1px solid green;
 }
 
 /* Nav Bar style */
@@ -147,4 +149,28 @@ body {
 
 .pokemon-card-link {
   list-style: none;
+}
+
+/* Current pokemon page */
+
+.current-pokemon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  padding: 20px;
+}
+
+/* Current pokemon box */
+
+.current-pokemon-box {
+  border: 1px solid blue;
+}
+
+.pokemon-info-boxes {
+  border: 1px solid red;
+}
+
+.current-pokemon-big-img {
+  border: 1px solid purple;
 }
