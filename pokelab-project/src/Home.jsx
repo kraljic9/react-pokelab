@@ -9,7 +9,7 @@ function Home() {
     <>
       <PokemonList />
 
-      <div className="button-container">
+      <div className="switch-button-container">
         <button
           onClick={() => setOffset((prev) => prev - 20)}
           className="switch-page-btn"
