@@ -77,14 +77,14 @@ function Pokemon() {
           </div>
         </div>
 
-        <div className="current-pokemon-big-img">
+        <div className="shiny-pokemon-container">
           <img
             src={`${currentPokemon?.sprites.front_shiny}`}
             alt="shiny-pokemon"
-            className="current-pokemon-shiny-img"
+            className="shiny-pokemon-img"
           />
           <h1 className="current-shiny-pokemon-name">
-            Shiny {currentPokemon?.name}
+            Shiny <br /> {currentPokemon?.name}
           </h1>
         </div>
       </div>
