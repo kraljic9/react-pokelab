@@ -76,12 +76,18 @@ function Pokemon() {
             <ul className="current-pokemon-stats-list">{fetchStats()}</ul>
           </div>
         </div>
+
+        <div className="current-pokemon-big-img">
+          <img
+            src={`${currentPokemon?.sprites.front_shiny}`}
+            alt="shiny-pokemon"
+            className="current-pokemon-shiny-img"
+          />
+          <h1 className="current-shiny-pokemon-name">
+            Shiny {currentPokemon?.name}
+          </h1>
+        </div>
       </div>
-      <img
-        src={`${currentPokemon?.sprites.front_shiny}`}
-        alt=""
-        className="current-pokemon-big-img"
-      />
     </>
   );
 }
