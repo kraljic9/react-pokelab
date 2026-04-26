@@ -3,7 +3,7 @@
 A comprehensive Pokémon encyclopedia powered by the **RESTful PokéAPI**. This project features a clean, laboratory-themed interface where users can search, filter, and explore detailed statistics of the Pokémon world.
 
 <p align="center">
-  <video src="/readmeImg/pokelab.mp4" width="600" alt="Pokelab project demo"></video>
+  <video src="https://github.com/user-attachments/assets/421aab9e-b90b-4386-a96c-fb8a5bfb5201" width="600" alt="Pokelab project demo"></video>
 </p>
 
 ## 📱 Project Showcase
