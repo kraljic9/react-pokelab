@@ -2,6 +2,10 @@
 
 A comprehensive Pokémon encyclopedia powered by the **RESTful PokéAPI**. This project features a clean, laboratory-themed interface where users can search, filter, and explore detailed statistics of the Pokémon world.
 
+<p align="center">
+  <img src="/readmeImg/pokelab.mp4" width="600" alt="Arena Battle Gameplay Demo">
+</p>
+
 ## 📱 Project Showcase
 
 <table align="center">
